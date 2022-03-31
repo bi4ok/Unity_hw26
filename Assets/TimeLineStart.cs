@@ -10,11 +10,8 @@ public class TimeLineStart : MonoBehaviour
         _timeLine = GetComponent<PlayableDirector>();
     }
 
-    private void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            _timeLine.Play();
-        }
+        _timeLine.Play();
     }
 }
